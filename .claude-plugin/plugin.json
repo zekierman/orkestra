@@ -1,0 +1,18 @@
+{
+  "name": "orkestra",
+  "version": "1.0.0",
+  "description": "herdr içinde yan yana çalışan kodlama ajanlarını (Claude Code, Codex, Antigravity) tek koordinatörle yönet. Odadaki ajanları kendiliğinden tanır, görevi net bir tanımla dağıtır, sonucu dosyadan toplar, iddiaları doğrular, tek cevapta birleştirir.",
+  "author": {
+    "name": "Zeki Erman"
+  },
+  "repository": "https://github.com/zekierman/orkestra",
+  "license": "MIT",
+  "keywords": [
+    "multi-agent",
+    "orchestration",
+    "herdr",
+    "codex",
+    "antigravity",
+    "code-review"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "orkestra",
+  "owner": {
+    "name": "Zeki Erman"
+  },
+  "metadata": {
+    "description": "orkestra: herdr içinde yan yana çalışan kodlama ajanlarını tek koordinatörle yönet."
+  },
+  "plugins": [
+    {
+      "name": "orkestra",
+      "source": "./",
+      "description": "Claude koordinatör, Codex ve agy işçi: görev tanımı, dosyadan sonuç, doğrulama, tek cevap."
+    }
+  ]
+}
