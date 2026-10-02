@@ -1,5 +1,7 @@
 # orkestra
 
+![orkestra demo](docs/demo.gif)
+
 An agent skill for running several coding agents side by side in herdr under one coordinator.
 Claude Code conducts; Codex and Antigravity (agy) are the workers. Claude knows who is in the room
 on its own, hands out tasks with a precise spec, collects results from files, checks the claims and

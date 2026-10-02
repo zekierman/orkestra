@@ -1,5 +1,7 @@
 # orkestra
 
+![orkestra tanıtım](docs/demo.gif)
+
 herdr içinde yan yana çalışan kodlama ajanlarını tek bir koordinatörün yönetmesi için bir ajan
 skill'i. Claude Code şef olur, Codex ve Antigravity (agy) işçi. Claude odada kimin olduğunu
 kendiliğinden bilir, görevi net bir tanımla dağıtır, sonuçları dosyadan toplar, iddiaları
