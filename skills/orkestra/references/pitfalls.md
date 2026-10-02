@@ -11,6 +11,7 @@
 | Codex still showed old memory after `/new` | Config loads at process start | Restart the process (`ctrl+c` ×2, start again) |
 | Sending `2` then Enter to an update dialog chose "Update now" | The key wasn't taken as a selection; Enter hit the default | Never answer dialogs for the user; ask them |
 | `codex exec` didn't get memory context | Hooks don't run in exec mode | Use an interactive pane when hooks matter |
+| Two workers wrote to one file literally named `dir$2`; the second overwrote the first | A spec built in a bash function escaped `\$2` (Windows path backslash before a variable) | Put each worker's full result path in a plain variable first, check the sent text, and never give two workers the same output name |
 
 ## Windows: console windows flashing while Codex works
 

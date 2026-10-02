@@ -13,7 +13,7 @@ move fast.
 | Wait | `herdr agent wait <target> --until idle --until done --timeout <ms>` |
 | Read screen | `herdr agent read <target> --source recent-unwrapped --lines 150` |
 | Keys | `herdr agent send-keys <target> esc` / `ctrl+c` / `enter` |
-| Start an agent in a shell pane | `herdr agent start <name> --kind codex|agy|claude --pane <pane>` |
+| Start an agent in a shell pane | `herdr agent start <name> --kind codex|agy|claude --pane <pane> [-- <flags from ~/.orkestra/launch.json>]` |
 | New pane beside you | `herdr pane split --current --direction right --cwd "$PWD" --no-focus` |
 | Notify the user | `herdr notification show "<title>" --body "<text>"` |
 
@@ -40,7 +40,11 @@ to deliver results through files.
   `agy -p "<prompt>" --mode plan --output-format json > result.json`
   (`--print-timeout 0` waits for the full turn; `--json-schema` enforces structure.)
 - Continue a thread: `-c` (latest) or `--conversation <id>`.
-- `--dangerously-skip-permissions` auto-approves tools — only with the user's consent.
+- `--dangerously-skip-permissions` auto-approves tools — only with the user's consent, recorded in
+  `~/.orkestra/launch.json` (see SKILL.md §5).
+- Without it, every approval stores the *exact* command string in
+  `~/.gemini/antigravity-cli/settings.json` → `permissions.allow`, so the next variant asks again.
+  `command(x)` rules are prefix matches: `command(git)` covers every git call.
 - Strong at quickly reading local docs and scanning sources; check its citations — it can present
   unsourced generalizations as research.
 - Quota: shared across Antigravity apps on the same Google account.

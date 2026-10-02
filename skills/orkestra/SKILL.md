@@ -77,4 +77,8 @@ Limits: <time/scope>; if blocked, write "BLOCKED <id>: <why>" to the result file
   **process** restarts; a "new chat" command is not enough.
 - Starting / restarting an agent: `herdr agent start <name> --kind <kind> --pane <pane>`; see
   `references/agents.md` for clean exits per agent.
+- **Launch flags are a user setting.** If `~/.orkestra/launch.json` exists (e.g.
+  `{"agy": ["--dangerously-skip-permissions"]}`), pass that agent's flags after `--` every time you
+  start or restart it: `herdr agent start agy --kind agy --pane <pane> -- --dangerously-skip-permissions`.
+  Without that file (or an explicit user request), never add permission-bypass flags yourself.
 - Don't close or repurpose panes you didn't create unless the user asks.
